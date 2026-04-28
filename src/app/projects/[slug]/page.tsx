@@ -36,6 +36,85 @@ const projectsData: Record<string, any> = {
       '/images/projects/ntpc/ntpc-flyash-project-2.webp',
     ],
   },
+  chitrangi: {
+    title: 'Area Leveling for Reliance, Chitrangi',
+    headerImage: '/images/projects/common-header.webp',
+    overview: "Large-scale area leveling and grading for Reliance Power's plant located at Chitrangi. This project involves enormous planning for man and machinery management in a remote location to meet strict construction deadlines.",
+    challenges: [
+      'Massive earthwork and area grading in remote terrain',
+      'Complex logistics for heavy machinery deployment',
+      'Stringent safety and quality benchmarks',
+    ],
+    gallery: [
+      '/images/projects/chit/ct1.webp',
+    ],
+  },
+  sasan: {
+    title: 'Area Leveling for Sasan UMPP',
+    headerImage: '/images/projects/common-header.webp',
+    overview: "Earth work for area grading at the 4000 MW Ultra Mega Power Project (UMPP) at Sasan for Reliance Power. As a high-priority fast-track project, it requires meticulous site management and high-volume daily output.",
+    challenges: [
+      'High-volume daily earthmoving targets',
+      '24/7 site operations and management',
+      'Adherence to international environmental standards',
+    ],
+    gallery: [
+      '/images/projects/icons/sasanthumb.webp',
+      '/images/projects/sas/sas1.webp',
+    ],
+  },
+  flyash: {
+    title: 'NTPC Flyash Project',
+    headerImage: '/images/projects/ntpc-head.webp',
+    overview: 'Successful removal and management of Flyash at Rihandnagar thermal power plant for NTPC. This project was executed with strict adherence to environmental protocols and safety standards, managing hazardous materials efficiently.',
+    challenges: [
+      'Safe handling and transport of Flyash',
+      'Minimizing environmental impact during removal',
+      'Strict adherence to NTPC safety protocols',
+    ],
+    gallery: [
+      '/images/projects/ntpc/ntpc-flyash-project-2.webp',
+    ],
+  },
+  rewa: {
+    title: 'C.C. Road Construction, Rewa',
+    headerImage: '/images/projects/common-header.webp',
+    overview: 'Construction of a premium 1km cement concrete roadway for the Public Works Department at Rewa, MP. Work included clearing, grading, seeding, and complex multi-layered paving to national highway standards.',
+    challenges: [
+      'High-precision concrete paving',
+      'Managing traffic flow during construction',
+      'Multi-layered road structure stability',
+    ],
+    gallery: [
+      '/images/projects/koshi/koshi-canal-project-2.webp',
+    ],
+  },
+  banquet: {
+    title: 'Banquet Hall Construction, Chunabhatti',
+    headerImage: '/images/projects/common-header.webp',
+    overview: 'Turnkey construction of a modern banquet facility at Chunabhatti, Mumbai. The project focused on high-quality structural finishing, load-bearing RCC work, and aesthetic landscaping for a premium social venue.',
+    challenges: [
+      'High-quality structural finishing',
+      'Complex RCC design and execution',
+      'Integrated site development and landscaping',
+    ],
+    gallery: [
+      '/images/projects/koshi/koshi-canal-project-3.webp',
+    ],
+  },
+  swadeshi: {
+    title: 'Swadeshi Mill Premises Development',
+    headerImage: '/images/projects/common-header.webp',
+    overview: 'Large-scale structural work and site development at the historic Swadeshi Mill premises in Chunabhatti, Mumbai. The project involved complex reinforced concrete construction and extensive area grading for future residential development.',
+    challenges: [
+      'Historical site preservation constraints',
+      'Large-scale area grading and leveling',
+      'Advanced reinforced concrete structural work',
+    ],
+    gallery: [
+      '/images/projects/koshi/koshi-canal-project-4.webp',
+    ],
+  },
 };
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
@@ -52,6 +131,12 @@ export async function generateStaticParams() {
   return [
     { slug: 'koshi' },
     { slug: 'sonbhadra' },
+    { slug: 'chitrangi' },
+    { slug: 'sasan' },
+    { slug: 'flyash' },
+    { slug: 'rewa' },
+    { slug: 'banquet' },
+    { slug: 'swadeshi' },
   ];
 }
 
