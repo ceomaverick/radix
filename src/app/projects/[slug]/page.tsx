@@ -117,8 +117,9 @@ const projectsData: Record<string, any> = {
   },
 };
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const project = projectsData[params.slug];
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projectsData[slug];
   if (!project) return { title: 'Project Not Found' };
   
   return {
@@ -140,8 +141,9 @@ export async function generateStaticParams() {
   ];
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = projectsData[params.slug];
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const project = projectsData[slug];
 
   if (!project) {
     return (
@@ -175,7 +177,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         "@type": "ListItem",
         "position": 3,
         "name": project.title,
-        "item": `https://radixinfra.com/projects/${params.slug}`
+        "item": `https://radixinfra.com/projects/${slug}`
       }
     ]
   };

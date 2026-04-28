@@ -54,6 +54,7 @@ export default function Header() {
               width={180}
               height={110}
               priority
+              style={{ height: 'auto' }}
               className="h-16 w-auto"
             />
           </Link>
@@ -126,7 +127,7 @@ export default function Header() {
           >
              <div className="flex items-center justify-between mb-8">
               <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
-                <Image src="/images/shared/logo.webp" alt="Radix Infra" width={100} height={60} />
+                <Image src="/images/shared/logo.webp" alt="Radix Infra" width={100} height={60} style={{ height: 'auto' }} />
               </Link>
               <button
                 type="button"
