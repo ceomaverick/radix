@@ -3,24 +3,33 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #2f9b9b; /* Radix Teal - Now Primary */
+  --secondary: #2f9b9b; /* Changed from #ed1c24 to match Primary Teal */
+  --accent: #66cccc; /* Light Blue */
+  --dark: #333333;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-dark: var(--dark);
+  --font-heading: var(--font-montserrat);
+  --font-body: var(--font-open-sans);
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }

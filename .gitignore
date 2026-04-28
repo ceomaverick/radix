@@ -39,3 +39,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local / tooling folders
+/ignore
+/aiskills
+
+# Design assets (Figma exports / raw files)
+/design
+
+# Docs (generated output — do not commit)
+/docs
+
+# Unused static assets
+public/images/unused
+public/unused
