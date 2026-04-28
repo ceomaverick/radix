@@ -44,9 +44,9 @@ export default function Header() {
 
   return (
     <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-1 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 lg:px-8" aria-label="Global">
+        <div className="flex lg:flex-1 py-2">
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center">
             <span className="sr-only">Radix Infra</span>
             <Image
               src="/images/shared/logo.webp"
@@ -55,7 +55,7 @@ export default function Header() {
               height={90}
               priority
               style={{ width: 'auto' }}
-              className="h-14 w-auto"
+              className="h-16 w-auto"
             />
           </Link>
         </div>
@@ -69,9 +69,9 @@ export default function Header() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-8">
+        <div className="hidden lg:flex lg:gap-x-8 items-center h-full">
           {navigation.map((item) => (
-            <div key={item.name} className="relative group py-3">
+            <div key={item.name} className="relative group flex items-center h-20">
               {item.children ? (
                 <>
                   <button className="flex items-center gap-x-1 text-xs font-bold uppercase tracking-wider leading-6 text-gray-700 group-hover:text-primary transition-colors">
@@ -79,7 +79,7 @@ export default function Header() {
                     <ChevronDownIcon className="h-3 w-3 text-gray-400 group-hover:text-primary group-hover:rotate-180 transition-transform duration-200" aria-hidden="true" />
                   </button>
                   
-                  <div className="absolute -left-4 top-full hidden group-hover:block pt-0 w-64">
+                  <div className="absolute -left-4 top-[calc(100%-1.5rem)] hidden group-hover:block pt-0 w-64 z-50">
                     <motion.div 
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -108,7 +108,7 @@ export default function Header() {
             </div>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
           <Button href="/contact" size="sm" className="text-xs py-1.5">
             Enquire Now
           </Button>
