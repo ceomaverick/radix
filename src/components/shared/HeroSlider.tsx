@@ -40,6 +40,8 @@ const slides = [
   },
 ];
 
+const blurDataURL = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDgiPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMzMzMiLz48L3N2Zz4=';
+
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
 
@@ -66,19 +68,32 @@ export default function HeroSlider() {
             alt={slides[current].title}
             fill
             priority
+            placeholder="blur"
+            blurDataURL={blurDataURL}
             sizes="100vw"
             className="object-cover opacity-60"
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center px-4 max-w-4xl">
-              <motion.h1
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
-                className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 uppercase drop-shadow-lg will-change-transform"
-              >
-                {slides[current].title}
-              </motion.h1>
+              {current === 0 ? (
+                <motion.h1
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
+                  className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 uppercase drop-shadow-lg will-change-transform"
+                >
+                  {slides[current].title}
+                </motion.h1>
+              ) : (
+                <motion.h2
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
+                  className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 uppercase drop-shadow-lg will-change-transform"
+                >
+                  {slides[current].title}
+                </motion.h2>
+              )}
               <motion.p
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}

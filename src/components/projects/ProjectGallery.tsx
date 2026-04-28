@@ -3,7 +3,7 @@
  * @page Project Detail (/app/projects/[slug]/page.tsx)
  * @description A responsive grid displaying images from the project gallery.
  * @shared false
- * @props project: any
+ * @props project: Project
  */
 
 'use client';

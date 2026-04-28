@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageHeader from '@/components/PageHeader';
+import PageHeader from '@/components/shared/PageHeader';
 import EthicsIntro from '@/components/about/EthicsIntro';
 import EthicsValuesGrid from '@/components/about/EthicsValuesGrid';
 

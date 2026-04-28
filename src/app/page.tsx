@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import HeroSlider from '@/components/HeroSlider';
+import HeroSlider from '@/components/shared/HeroSlider';
 import HomeOverview from '@/components/home/HomeOverview';
-import ProjectCarousel from '@/components/ProjectCarousel';
+import ProjectCarousel from '@/components/shared/ProjectCarousel';
 import HomeQuickLinks from '@/components/home/HomeQuickLinks';
 
 export const metadata: Metadata = {

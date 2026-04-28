@@ -3,7 +3,7 @@
  * @page Completed Projects (/app/projects/completed/page.tsx)
  * @description Displays a list of completed projects with alternating image/text grid layouts.
  * @shared false
- * @props projects: any[]
+ * @props projects: Project[]
  */
 
 'use client';

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageHeader from '@/components/PageHeader';
+import PageHeader from '@/components/shared/PageHeader';
 import CareersIntro from '@/components/careers/CareersIntro';
 import CareersOpenings from '@/components/careers/CareersOpenings';
 import CareersCulture from '@/components/careers/CareersCulture';

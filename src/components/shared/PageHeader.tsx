@@ -14,14 +14,18 @@ interface PageHeaderProps {
   backgroundImage?: string;
 }
 
+const blurDataURL = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDgiPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMzMzMiLz48L3N2Zz4=';
+
 export default function PageHeader({ title, subtitle, backgroundImage = '/images/projects/common-header.webp' }: PageHeaderProps) {
   return (
     <div className="relative h-64 flex items-center justify-center bg-gray-900">
       <Image
         src={backgroundImage}
-        alt={title}
+        alt=""
         fill
         priority
+        placeholder="blur"
+        blurDataURL={blurDataURL}
         sizes="100vw"
         className="object-cover opacity-40"
       />

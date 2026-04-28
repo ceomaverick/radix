@@ -8,7 +8,7 @@
 
 'use client';
 
-import Button from '@/components/Button';
+import Button from '@/components/shared/Button';
 
 export default function ContactForm() {
   return (

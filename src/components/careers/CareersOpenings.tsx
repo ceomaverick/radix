@@ -3,7 +3,7 @@
  * @page Careers (/app/careers/page.tsx)
  * @description Accordion list of current job openings with details and application call-to-action.
  * @shared false
- * @props jobs: any[]
+ * @props jobs: Job[]
  */
 
 'use client';

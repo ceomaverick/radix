@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageHeader from '@/components/PageHeader';
+import PageHeader from '@/components/shared/PageHeader';
 import ContactInfo from '@/components/contact/ContactInfo';
 import ContactForm from '@/components/contact/ContactForm';
 import ContactMap from '@/components/contact/ContactMap';

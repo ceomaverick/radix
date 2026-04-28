@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageHeader from '@/components/PageHeader';
+import PageHeader from '@/components/shared/PageHeader';
 import ProjectsCurrentList from '@/components/projects/ProjectsCurrentList';
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ const currentProjects = [
     location: 'Bihar',
     client: 'Government of Bihar',
     description: 'Extension, renovation and modernisation of Eastern Koshi Canal System. Includes removal of debris and silt in and around the dam area extending up to 60 Sq.km.',
-    image: '/images/projects/koshi/1.webp',
+    image: '/images/projects/koshi/koshi-canal-project-1.webp',
   },
   {
     slug: 'sonbhadra',
@@ -22,7 +22,7 @@ const currentProjects = [
     location: 'Sonbhadra, UP',
     client: 'NTPC',
     description: "Construction of a 3km Nallah to divert the waste water at NTPC's power plant. Requires precise engineering and timely execution to maintain plant operations.",
-    image: '/images/projects/ntpc/ntpc1.webp',
+    image: '/images/projects/ntpc/ntpc-nallah-diversion-1.webp',
   },
   {
     slug: 'chitrangi',

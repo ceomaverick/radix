@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageHeader from '@/components/PageHeader';
+import PageHeader from '@/components/shared/PageHeader';
 import ProfileOverview from '@/components/about/ProfileOverview';
 import ProfileVerticals from '@/components/about/ProfileVerticals';
 import ProfileAdvantage from '@/components/about/ProfileAdvantage';

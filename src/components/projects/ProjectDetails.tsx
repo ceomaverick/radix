@@ -3,7 +3,7 @@
  * @page Project Detail (/app/projects/[slug]/page.tsx)
  * @description Detailed overview of a specific project, including challenges and a client testimonial.
  * @shared false
- * @props project: any
+ * @props project: Project
  */
 
 'use client';

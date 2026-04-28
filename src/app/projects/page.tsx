@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageHeader from '@/components/PageHeader';
+import PageHeader from '@/components/shared/PageHeader';
 import ProjectsCategorySelector from '@/components/projects/ProjectsCategorySelector';
 
 export const metadata: Metadata = {

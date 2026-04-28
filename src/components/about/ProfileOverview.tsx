@@ -39,18 +39,18 @@ export default function ProfileOverview() {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <div className="relative h-64 w-full overflow-hidden rounded-2xl shadow-lg">
-                <Image src="/images/projects/koshi/1.webp" alt="Koshi Canal Project" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
+                <Image src="/images/projects/koshi/koshi-canal-project-1.webp" alt="Koshi Canal Project" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
               </div>
               <div className="relative h-48 w-full overflow-hidden rounded-2xl shadow-lg">
-                <Image src="/images/projects/ntpc/ntpc1.webp" alt="NTPC Nallah Diversion" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
+                <Image src="/images/projects/ntpc/ntpc-nallah-diversion-1.webp" alt="NTPC Nallah Diversion" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
               </div>
             </div>
             <div className="space-y-4 pt-8">
               <div className="relative h-48 w-full overflow-hidden rounded-2xl shadow-lg">
-                <Image src="/images/projects/koshi/2.webp" alt="C.C. Road Construction" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
+                <Image src="/images/projects/koshi/koshi-canal-project-2.webp" alt="C.C. Road Construction" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
               </div>
               <div className="relative h-64 w-full overflow-hidden rounded-2xl shadow-lg">
-                <Image src="/images/projects/ntpc/ntpc2.webp" alt="NTPC Flyash Project" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
+                <Image src="/images/projects/ntpc/ntpc-flyash-project-2.webp" alt="NTPC Flyash Project" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageHeader from '@/components/PageHeader';
+import PageHeader from '@/components/shared/PageHeader';
 import VisionDisplay from '@/components/about/VisionDisplay';
 import MissionDisplay from '@/components/about/MissionDisplay';
 

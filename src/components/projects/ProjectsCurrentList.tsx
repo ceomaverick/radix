@@ -3,7 +3,7 @@
  * @page Current Projects (/app/projects/current/page.tsx)
  * @description Displays a list of ongoing projects with alternating image/text grid layouts.
  * @shared false
- * @props projects: any[]
+ * @props projects: Project[]
  */
 
 'use client';

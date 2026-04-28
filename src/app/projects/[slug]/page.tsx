@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageHeader from '@/components/PageHeader';
+import PageHeader from '@/components/shared/PageHeader';
 import ProjectDetails from '@/components/projects/ProjectDetails';
 import ProjectGallery from '@/components/projects/ProjectGallery';
 import Link from 'next/link';
@@ -15,7 +15,12 @@ const projectsData: Record<string, any> = {
       'Embankment and rebuilding of the canal.',
       'Off site disposal of the silt',
     ],
-    gallery: Array.from({ length: 12 }, (_, i) => `/images/projects/koshi/${i + 1}.webp`),
+    gallery: [
+      '/images/projects/koshi/koshi-canal-project-1.webp',
+      '/images/projects/koshi/koshi-canal-project-2.webp',
+      '/images/projects/koshi/koshi-canal-project-3.webp',
+      '/images/projects/koshi/koshi-canal-project-4.webp',
+    ],
   },
   sonbhadra: {
     title: 'Nallah Diversion for NTPC',
@@ -26,7 +31,10 @@ const projectsData: Record<string, any> = {
       'Strict adherence to environmental safety protocols',
       'Coordinating with NTPC operational schedules',
     ],
-    gallery: Array.from({ length: 9 }, (_, i) => `/images/projects/ntpc/ntpc${i + 1}.webp`),
+    gallery: [
+      '/images/projects/ntpc/ntpc-nallah-diversion-1.webp',
+      '/images/projects/ntpc/ntpc-flyash-project-2.webp',
+    ],
   },
 };
 

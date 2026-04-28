@@ -8,7 +8,7 @@
 
 'use client';
 
-import Button from '@/components/Button';
+import Button from '@/components/shared/Button';
 import { CheckBadgeIcon, DocumentArrowDownIcon, ArrowDownTrayIcon } from '@heroicons/react/24/outline';
 
 export default function ProfileDownload() {
