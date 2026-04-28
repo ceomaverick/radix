@@ -44,18 +44,18 @@ export default function Header() {
 
   return (
     <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-8" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-1 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Radix Infra</span>
             <Image
               src="/images/shared/logo.webp"
               alt="Radix Infra Logo"
-              width={180}
-              height={110}
+              width={150}
+              height={90}
               priority
-              style={{ height: 'auto' }}
-              className="h-16 w-auto"
+              style={{ width: 'auto' }}
+              className="h-12 w-auto"
             />
           </Link>
         </div>
@@ -71,10 +71,10 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex lg:gap-x-8">
           {navigation.map((item) => (
-            <div key={item.name} className="relative group py-4">
+            <div key={item.name} className="relative group py-3">
               {item.children ? (
                 <>
-                  <button className="flex items-center gap-x-1 text-sm font-bold uppercase tracking-wider leading-6 text-gray-700 group-hover:text-primary transition-colors">
+                  <button className="flex items-center gap-x-1 text-xs font-bold uppercase tracking-wider leading-6 text-gray-700 group-hover:text-primary transition-colors">
                     {item.name}
                     <ChevronDownIcon className="h-3 w-3 text-gray-400 group-hover:text-primary group-hover:rotate-180 transition-transform duration-200" aria-hidden="true" />
                   </button>
@@ -83,14 +83,14 @@ export default function Header() {
                     <motion.div 
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="bg-white rounded-2xl shadow-2xl ring-1 ring-black/5 overflow-hidden border border-gray-100"
+                      className="bg-white rounded-xl shadow-2xl ring-1 ring-black/5 overflow-hidden border border-gray-100"
                     >
                       <div className="py-2">
                         {item.children.map((child) => (
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="group/item flex items-center justify-between px-5 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-primary transition-all"
+                            className="group/item flex items-center justify-between px-5 py-2.5 text-xs font-medium text-gray-600 hover:bg-gray-50 hover:text-primary transition-all"
                           >
                             {child.name}
                             <span className="h-1.5 w-1.5 rounded-full bg-primary opacity-0 group-hover/item:opacity-100 transition-opacity" />
@@ -101,7 +101,7 @@ export default function Header() {
                   </div>
                 </>
               ) : (
-                <Link href={item.href} className="text-sm font-bold uppercase tracking-wider leading-6 text-gray-700 hover:text-primary transition-colors">
+                <Link href={item.href} className="text-xs font-bold uppercase tracking-wider leading-6 text-gray-700 hover:text-primary transition-colors">
                   {item.name}
                 </Link>
               )}
@@ -109,7 +109,7 @@ export default function Header() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button href="/contact" size="sm">
+          <Button href="/contact" size="sm" className="text-xs py-1.5">
             Enquire Now
           </Button>
         </div>
@@ -127,7 +127,7 @@ export default function Header() {
           >
              <div className="flex items-center justify-between mb-8">
               <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
-                <Image src="/images/shared/logo.webp" alt="Radix Infra" width={100} height={60} style={{ height: 'auto' }} />
+                <Image src="/images/shared/logo.webp" alt="Radix Infra" width={100} height={60} style={{ width: 'auto' }} className="h-10 w-auto" />
               </Link>
               <button
                 type="button"
