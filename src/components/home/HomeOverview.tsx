@@ -12,6 +12,8 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Button from '@/components/shared/Button';
 
+const blurDataURL = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDgiPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMzMzMiLz48L3N2Zz4=';
+
 export default function HomeOverview() {
   return (
     <section className="py-16 bg-white">
@@ -51,6 +53,8 @@ export default function HomeOverview() {
               alt="Radix Infra industrial construction site with heavy machinery"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
+              placeholder="blur"
+              blurDataURL={blurDataURL}
               className="object-cover"
             />
           </motion.div>

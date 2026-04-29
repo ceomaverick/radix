@@ -11,6 +11,8 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
+const blurDataURL = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDgiPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMzMzMiLz48L3N2Zz4=';
+
 export default function EthicsIntro() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
@@ -26,20 +28,23 @@ export default function EthicsIntro() {
           Our Code of Ethics
         </h2>
         <p className="text-xl text-gray-600 leading-relaxed">
-          We are committed to maintaining world-class standards of business integrity everywhere we operate. Our code of ethics is more than a collection of abstract ideas; it’s our longstanding commitment to ethical behavior.
+          We are committed to maintaining world-class standards of business integrity everywhere we operate. Our code of ethics is more than a collection of abstract ideas; itâ€™s our longstanding commitment to ethical behavior.
         </p>
       </motion.div>
-      
+
       <div className="relative rounded-none overflow-hidden shadow-2xl h-96 border-b-8 border-primary grayscale hover:grayscale-0 transition-all duration-700">
         <Image
           src="/images/about/ethics.webp"
           alt="Radix Ethics and Governance"
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"
+          placeholder="blur"
+          blurDataURL={blurDataURL}
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-dark/20 group-hover:bg-transparent transition-colors"></div>
+        <div className="absolute inset-0 bg-dark/20 group-hover:bg-transparent transition-colors"></div>        
       </div>
     </div>
   );
 }
+

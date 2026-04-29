@@ -10,6 +10,8 @@
 
 import Image from 'next/image';
 
+const blurDataURL = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDgiPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMzMzMiLz48L3N2Zz4=';
+
 export default function CareersCulture() {
   return (
     <div className="bg-white border-2 border-gray-100 p-8 shadow-sm">
@@ -28,13 +30,16 @@ export default function CareersCulture() {
           alt="Radix Infra professional team ecosystem and work culture"
           fill
           sizes="(max-width: 1024px) 100vw, 33vw"
+          placeholder="blur"
+          blurDataURL={blurDataURL}
           className="object-cover"
         />
       </div>
-      <blockquote className="border-l-2 border-primary pl-6 italic text-sm text-gray-400 leading-relaxed">
+      <blockquote className="border-l-2 border-primary pl-6 italic text-sm text-gray-400 leading-relaxed">      
         "Coming together is a beginning. Keeping together is progress. Working together is success."
-        <span className="block mt-4 font-black text-dark uppercase tracking-widest text-[10px]">— Henry Ford</span>
+        <span className="block mt-4 font-black text-dark uppercase tracking-widest text-[10px]">â€” Henry Ford</span>
       </blockquote>
     </div>
   );
 }
+

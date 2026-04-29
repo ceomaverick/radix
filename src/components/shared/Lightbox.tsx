@@ -1,3 +1,11 @@
+/**
+ * @component Lightbox
+ * @page Shared
+ * @description A full-screen image viewer with navigation and keyboard support.
+ * @shared true
+ * @props images: string[], currentIndex: number, isOpen: boolean, onClose: () => void, onPrev: () => void, onNext: () => void
+ */
+
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';

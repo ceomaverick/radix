@@ -11,6 +11,8 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
+const blurDataURL = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDgiPjxyZWN0IHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMzMzMiLz48L3N2Zz4=';
+
 interface TeamManagementGridProps {
   team: {
     name: string;
@@ -58,7 +60,9 @@ export default function TeamManagementGrid({ team }: TeamManagementGridProps) {
                   alt={member.name}
                   width={160}
                   height={208}
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-lg"
+                  placeholder="blur"
+                  blurDataURL={blurDataURL}
+                  className="object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-lg"    
                 />
               </div>
               <div className="flex-1">
@@ -79,3 +83,4 @@ export default function TeamManagementGrid({ team }: TeamManagementGridProps) {
     </section>
   );
 }
+
