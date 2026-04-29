@@ -9,8 +9,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { CheckBadgeIcon } from '@heroicons/react/24/outline';
+import { CheckBadgeIcon, ArrowsPointingOutIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
+import { useState } from 'react';
+import Lightbox from '@/components/shared/Lightbox';
 
 interface Project {
   title: string;
@@ -27,6 +29,15 @@ interface ProjectsCompletedListProps {
 }
 
 export default function ProjectsCompletedList({ projects }: ProjectsCompletedListProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const allImages = projects.map(p => p.image);
+
+  const openLightbox = (index: number) => {
+    setCurrentIndex(index);
+    setIsOpen(true);
+  };
+
   return (
     <section className="py-20">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
@@ -59,16 +70,24 @@ export default function ProjectsCompletedList({ projects }: ProjectsCompletedLis
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
             >
               <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                <div className="aspect-video overflow-hidden border-b-8 border-primary shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 relative group">
+                <div 
+                  className="aspect-video overflow-hidden border-b-8 border-primary shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 relative group cursor-pointer"
+                  onClick={() => openLightbox(index)}
+                >
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute top-4 right-4 bg-primary text-white font-black px-4 py-2 text-sm shadow-xl z-10">
                     DELIVERED {project.year}
+                  </div>
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <div className="bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                      <ArrowsPointingOutIcon className="h-6 w-6 text-primary" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -100,6 +119,15 @@ export default function ProjectsCompletedList({ projects }: ProjectsCompletedLis
           ))}
         </div>
       </div>
+
+      <Lightbox
+        images={allImages}
+        currentIndex={currentIndex}
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        onNext={() => setCurrentIndex((prev) => (prev + 1) % allImages.length)}
+        onPrev={() => setCurrentIndex((prev) => (prev - 1 + allImages.length) % allImages.length)}
+      />
     </section>
   );
 }
