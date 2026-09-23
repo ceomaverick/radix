@@ -1,4 +1,4 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+﻿# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
@@ -19,6 +19,8 @@
 
 # production
 /build
+/dist/
+/.turbo/
 
 # misc
 .DS_Store
@@ -47,9 +49,9 @@ next-env.d.ts
 # Design assets (Figma exports / raw files)
 /design
 
-# Docs (generated output � do not commit)
-/docs
+# Docs (generated output — do not commit)
 
 # Unused static assets
 public/images/unused
 public/unused
+

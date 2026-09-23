@@ -15,6 +15,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://radixinfra.com'),
   title: "Radix Infra Projects | India's Leading Infrastructure Company",
   description: "Radix Infra is a leading turnkey infrastructure firm in India, specializing in Earthworks, RCC Projects, Road Construction, and Hard Landscaping since 1998.",
   openGraph: {
